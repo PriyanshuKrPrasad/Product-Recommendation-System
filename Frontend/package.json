@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://PriyanshuKrPrasad/Product-Recommendation-System.git",
+  "homepage": "https://PriyanshuKrPrasad.github.io/Product-Recommendation-System",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
