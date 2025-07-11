@@ -5,13 +5,14 @@ from typing import List
 import random
 import httpx
 import os
+import uvicorn  # Required to run locally
 
 app = FastAPI()
 
 # CORS settings
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["*"],  # Allow frontend (localhost:5173 or deployed site)
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -61,11 +62,14 @@ async def recommend(product: str = Query(..., description="Comma-separated list 
         if p in product_map:
             recommended += product_map[p]
         else:
-            # Fetch from Google if not in predefined map
             google_recs = await fetch_google_recommendations(p)
             recommended += google_recs
 
-    # Shuffle and limit results
-    recommended = list(set(recommended))
+    recommended = list(set(recommended))  # Remove duplicates
     random.shuffle(recommended)
     return {"recommended": recommended[:6]}
+
+# 🏁 Run locally and support for deployment (Render/Heroku etc.)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  # Render sets PORT automatically
+    uvicorn.run("Backend.App.main:app", host="0.0.0.0", port=port, reload=True)
