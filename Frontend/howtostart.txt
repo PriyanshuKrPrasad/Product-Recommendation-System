@@ -1,0 +1,13 @@
+To start this application you need to start both server 
+frontend and backend.
+To start the frontend, go to the frontend folder and run the following command:
+```
+cd frontend
+npm run dev
+```
+To start the backend, go to the backend folder and run the following command:
+```
+cd backend
+uvicorn App.main:app --host 0.0.0.0 --port 8000 --reload 
+```
+Once both applications are running, you can access the frontend at http://localhost:5173 and the backend at http://localhost:8000.

@@ -1,5 +1,4 @@
-import React from 'react';
-import  { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import CreatableSelect from 'react-select/creatable';
 
 function App() {
@@ -34,7 +33,7 @@ function App() {
 
     setLoading(true);
     try {
-      const res = await fetch(`https://product-recommendation-system-5.onrender.com/recommend?product=${encodeURIComponent(query)}`);
+      const res = await fetch(`http://localhost:8000/recommend?product=${encodeURIComponent(query)}`);
       const data = await res.json();
       setRecommendations(data.recommended || []);
 

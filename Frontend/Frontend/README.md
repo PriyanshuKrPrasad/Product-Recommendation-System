@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-🚀 Smart Product Recommender is a full-stack app built with React (frontend) and FastAPI (backend) that fetches real-time product suggestions using the 🔍 Google Custom Search API. Just type in any product and boom 💥— you get smart, dynamic recommendations instantly! The sleek and responsive UI lets you toggle between light 🌞 and dark 🌙 modes, keeps a history of your searches 📜, and works seamlessly across devices 📱💻. The backend is deployed on Render 🔧 and the frontend is live on Vercel 🌐. A perfect blend of full-stack magic ✨, real-world API integration 🔗, and user-first design 🎯.
-=======
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
@@ -13,4 +10,3 @@ Currently, two official plugins are available:
 ## Expanding the ESLint configuration
 
 If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
->>>>>>> fb98c89 (Initial commit)
